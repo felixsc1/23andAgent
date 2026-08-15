@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "skills": {
+    "database-lookup": {
+      "source": "k-dense-ai/scientific-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/database-lookup/SKILL.md",
+      "computedHash": "dc8fb6b95789b02e9ce5b3072e79cf95c753062eea4fa2ca20e019cb0d72213d"
+    },
+    "gget": {
+      "source": "k-dense-ai/scientific-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/gget/SKILL.md",
+      "computedHash": "b7a9113d0d52a1018b01ba1b2a34ce403ef43b74e4c4d6d8f0024f8c53eeea8f"
+    },
+    "paper-lookup": {
+      "source": "k-dense-ai/scientific-agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/paper-lookup/SKILL.md",
+      "computedHash": "8f577d2c3ec8bf892f525d69aea4c8e0c8143d8b0d9d27ce0bc4e5b2f4520bae"
+    }
+  }
+}

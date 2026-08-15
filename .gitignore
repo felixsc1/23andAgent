@@ -1,0 +1,10 @@
+# Personal genome — never commit or push
+raw_genome/
+data/genome.sqlite
+data/genome.sqlite-journal
+
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.python-version

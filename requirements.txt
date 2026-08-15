@@ -1,0 +1,3 @@
+# Optional. Core lookup uses the Python stdlib only.
+# Uncomment if you want the DTC-genotype helper library:
+# snps>=2.12.0
