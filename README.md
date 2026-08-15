@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/logo.jpg" alt="Cartoon DNA double helix mascot" width="200">
+  <img src="docs/logo.jpg" alt="Cartoon DNA double helix mascot" width="500">
 </p>
 
 # 23andAgent
