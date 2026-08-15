@@ -40,7 +40,7 @@ def main() -> int:
     RAW_DIR.mkdir(parents=True, exist_ok=True)
     INDEX_PATH.parent.mkdir(parents=True, exist_ok=True)
 
-    print("Personal 23andMe setup")
+    print("23andAgent setup")
     print(f"  raw file dir : {RAW_DIR}")
     print(f"  sqlite index : {INDEX_PATH}")
     print()

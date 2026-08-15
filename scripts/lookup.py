@@ -22,7 +22,7 @@ INDEX_PATH = ROOT / "data" / "genome.sqlite"
 MARKERS_PATH = ROOT / "data" / "panels" / "markers.json"
 
 COMPLEMENT = str.maketrans("ACGTacgt", "TGCAtgca")
-USER_AGENT = "23andme-personal-genome-lookup/1.0 (local research; not a medical device)"
+USER_AGENT = "23andAgent-lookup/1.0 (local research; not a medical device)"
 
 
 def find_genome_file() -> Path:

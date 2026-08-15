@@ -1,5 +1,6 @@
 # Personal genome — never commit or push
-raw_genome/
+raw_genome/*
+!raw_genome/.gitkeep
 data/genome.sqlite
 data/genome.sqlite-journal
 

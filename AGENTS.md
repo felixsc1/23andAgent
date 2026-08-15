@@ -1,4 +1,4 @@
-# Personal 23andMe workspace
+# 23andAgent
 
 Local, educational discussion of **one person's** 23andMe raw genotypes. Focus: **health markers, pharmacogenomics, and personality/cognition traits**. Skip ancestry unless asked.
 

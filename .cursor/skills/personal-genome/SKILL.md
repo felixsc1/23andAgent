@@ -5,7 +5,7 @@ description: Look up this project's 23andMe genotypes for health, pharmacogenomi
 
 # Personal genome lookup
 
-This repo holds one local 23andMe raw file. Chat about **health, PGx, and traits** — not ancestry.
+23andAgent holds one local 23andMe raw file. Chat about **health, PGx, and traits** — not ancestry.
 
 ## Always do this
 
