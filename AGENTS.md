@@ -40,7 +40,15 @@ Do **not** read the raw genome file into the conversation. Use the CLI. Do **not
 | `replicated_gwas` | Real association, usually tiny effect. Not a diagnosis. |
 | `exploratory` | Candidate-gene / consumer-report favorite. Lead with uncertainty. |
 
-Personality genetics is **highly polygenic**. Single SNPs (COMT, BDNF, OXTR, 5-HTTLPR proxies, MAOA) do **not** determine personality. The famous MAOA-uVNTR and 5-HTTLPR indels are **not** reliably on this chip.
+Personality genetics is **highly polygenic**. Single SNPs (COMT, BDNF, OXTR, 5-HTTLPR proxies, MAOA) do **not** determine personality. The famous MAOA-uVNTR, 5-HTTLPR indel, and DRD4 exon-3 7-repeat (wanderlust) VNTRs are **not** reliably on this chip; nearby SNPs are not substitutes.
+
+## Windows / PowerShell
+
+The default shell here is Windows PowerShell 5, not bash.
+
+- Do **not** chain commands with `&&`. Use separate tool calls, or `;`.
+- PowerShell's `curl` is `Invoke-WebRequest` and will reject `--data-urlencode`. Call **`curl.exe`**.
+- `python scripts/lookup.py annotate` hits Ensembl, GWAS Catalog, and MyVariant. If one host times out, report that source as failed and continue with the others / the database-lookup and paper-lookup skills. A timeout is not a missing genotype.
 
 APOE e2/e3/e4 needs **both** `rs429358` and `rs7412`. CYP2D6 metabolizer status **cannot** be called from one or two SNPs.
 

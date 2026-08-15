@@ -124,7 +124,7 @@ Never echo a key, and never let one reach your output. Two of these APIs authent
 
 ## Making API Calls
 
-**Use `curl` via Bash.** That is what this skill's `allowed-tools` grants, and it is what these APIs need — a summarizing fetch tool cannot serve most of them:
+**Use `curl` via the shell.** On Windows PowerShell, `curl` is `Invoke-WebRequest` and will reject `--get` / `--data-urlencode`; call **`curl.exe`** instead. These APIs need raw bytes, custom headers, and POST bodies — a summarizing fetch tool cannot serve most of them:
 
 - **Custom headers.** Semantic Scholar authenticates with `x-api-key: $S2_API_KEY`; CORE uses `Authorization: Bearer $CORE_API_KEY`.
 - **POST bodies.** Semantic Scholar's `/paper/batch` and `/recommendations/papers/` endpoints, and CORE's complex search, are POST with a JSON body.

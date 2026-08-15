@@ -226,7 +226,8 @@ def search_catalog(query: str, catalog: dict) -> list[dict]:
     return enrich_with_catalog(lookup_rsids(hits), catalog)
 
 
-def http_get_json(url: str, timeout: int = 30):
+def http_get_json(url: str, timeout: int = 45):
+    """Fetch JSON. Never raise: annotate should survive a slow Ensembl/GWAS host."""
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT, "Accept": "application/json"})
     try:
         with urllib.request.urlopen(req, timeout=timeout) as resp:
@@ -235,6 +236,9 @@ def http_get_json(url: str, timeout: int = 30):
         return {"error": f"HTTP {exc.code}", "url": url}
     except urllib.error.URLError as exc:
         return {"error": str(exc.reason), "url": url}
+    except (TimeoutError, json.JSONDecodeError, OSError) as exc:
+        # ssl/socket timeouts raise TimeoutError, which is not a URLError on Python 3.10+.
+        return {"error": str(exc), "url": url}
 
 
 def annotate_rsid(rsid: str) -> dict:

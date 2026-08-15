@@ -170,9 +170,9 @@ Use your environment's HTTP fetch tool to call REST endpoints. The tool name var
 | Codex CLI | No dedicated fetch tool | `curl` via `shell` |
 | Cline | No dedicated fetch tool | `curl` via `execute_command` |
 
-If you don't recognize your platform or the fetch tool fails, fall back to `curl` via whatever shell/terminal tool is available. Example:
+If you don't recognize your platform or the fetch tool fails, fall back to `curl` via whatever shell/terminal tool is available. **On Windows PowerShell, `curl` is `Invoke-WebRequest`** — it will reject `--data-urlencode` and `--get`. Call **`curl.exe`** instead. Example:
 ```bash
-curl -s -H "Accept: application/json" "https://api.example.com/endpoint"
+curl.exe -s -H "Accept: application/json" "https://api.example.com/endpoint"
 ```
 
 ### Request guidelines
